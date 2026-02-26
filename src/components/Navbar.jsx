@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/Gwa Logo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -32,19 +32,64 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[60] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <Link to="/">Home</Link>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
+                    : "hover:text-pink-500 transition"
+                }
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to="/about">About Us</Link>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
+                    : "hover:text-pink-500 transition"
+                }
+              >
+                About Us
+              </NavLink>
             </li>
             <li>
-              <Link to="/programs">Programs</Link>
+              <NavLink
+                to="/programs"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
+                    : "hover:text-pink-500 transition"
+                }
+              >
+                Programs
+              </NavLink>
             </li>
             <li>
-              <Link to="/gallery">Gallery</Link>
+              <NavLink
+                to="/gallery"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
+                    : "hover:text-pink-500 transition"
+                }
+              >
+                Gallery
+              </NavLink>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
+                    : "hover:text-pink-500 transition"
+                }
+              >
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -66,20 +111,65 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 items-center">
           <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About Us</Link>
-          </li>
-          <li>
-            <Link to="/programs">Programs</Link>
-          </li>
-          <li>
-            <Link to="/gallery">Gallery</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
+                    : "hover:text-pink-500 transition"
+                }
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
+                    : "hover:text-pink-500 transition"
+                }
+              >
+                About Us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/programs"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
+                    : "hover:text-pink-500 transition"
+                }
+              >
+                Programs
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/gallery"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
+                    : "hover:text-pink-500 transition"
+                }
+              >
+                Gallery
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
+                    : "hover:text-pink-500 transition"
+                }
+              >
+                Contact
+              </NavLink>
+            </li>
         </ul>
       </div>
 
