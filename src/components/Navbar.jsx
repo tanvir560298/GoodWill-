@@ -2,14 +2,18 @@ import React from "react";
 import logo from "../assets/Gwa Logo.png";
 import { Link, NavLink } from "react-router-dom";
 
+const activeClass =
+  "text-pink-600 font-semibold border-b-2 border-pink-600 pb-1";
+const baseClass = "hover:text-pink-500 transition";
+
 const Navbar = () => {
   return (
-    <div className="navbar fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-md shadow-md px-4">
-      {/* LEFT: Logo + Mobile Dropdown */}
-      <div className="navbar-start">
+    <div className="navbar fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-md shadow-md px-2 sm:px-4">
+      {/* LEFT: Mobile Menu + Logo */}
+      <div className="navbar-start flex items-center gap-0">
         {/* Mobile menu */}
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <label tabIndex={0} className="btn btn-ghost px-2 lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -24,9 +28,8 @@ const Navbar = () => {
                 d="M4 6h16M4 12h8m-8 6h16"
               />
             </svg>
-          </div>
+          </label>
 
-          {/* ✅ Mobile Dropdown Items */}
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[60] mt-3 w-52 p-2 shadow"
@@ -34,11 +37,8 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
-                    : "hover:text-pink-500 transition"
-                }
+                end
+                className={({ isActive }) => (isActive ? activeClass : baseClass)}
               >
                 Home
               </NavLink>
@@ -46,11 +46,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/about"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
-                    : "hover:text-pink-500 transition"
-                }
+                className={({ isActive }) => (isActive ? activeClass : baseClass)}
               >
                 About Us
               </NavLink>
@@ -58,11 +54,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/programs"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
-                    : "hover:text-pink-500 transition"
-                }
+                className={({ isActive }) => (isActive ? activeClass : baseClass)}
               >
                 Programs
               </NavLink>
@@ -70,11 +62,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/gallery"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
-                    : "hover:text-pink-500 transition"
-                }
+                className={({ isActive }) => (isActive ? activeClass : baseClass)}
               >
                 Gallery
               </NavLink>
@@ -82,11 +70,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/contact"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
-                    : "hover:text-pink-500 transition"
-                }
+                className={({ isActive }) => (isActive ? activeClass : baseClass)}
               >
                 Contact
               </NavLink>
@@ -94,88 +78,72 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* ✅ Logo */}
-        <a className="btn btn-ghost flex items-center gap-2">
+        {/* Logo */}
+        <Link to="/" className="btn btn-ghost px-1 flex items-center gap-1">
           <img
             src={logo}
             alt="Goodwill Alliance Logo"
-            className="h-12 w-auto object-contain"
+            className="h-10 sm:h-12 w-auto object-contain"
           />
-          <Link to="/" className="font-bold text-lg hidden sm:block">
+          <span className="font-bold text-base sm:text-lg hidden sm:block">
             Goodwill Alliance BD
-          </Link>
-        </a>
+          </span>
+        </Link>
       </div>
 
       {/* CENTER: Desktop Menu */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 items-center">
+        <ul className="menu menu-horizontal px-1 items-center gap-1">
           <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
-                    : "hover:text-pink-500 transition"
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
-                    : "hover:text-pink-500 transition"
-                }
-              >
-                About Us
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/programs"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
-                    : "hover:text-pink-500 transition"
-                }
-              >
-                Programs
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/gallery"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
-                    : "hover:text-pink-500 transition"
-                }
-              >
-                Gallery
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-pink-600 font-semibold border-b-2 border-pink-600"
-                    : "hover:text-pink-500 transition"
-                }
-              >
-                Contact
-              </NavLink>
-            </li>
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) => (isActive ? activeClass : baseClass)}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? activeClass : baseClass)}
+            >
+              About Us
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/programs"
+              className={({ isActive }) => (isActive ? activeClass : baseClass)}
+            >
+              Programs
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/gallery"
+              className={({ isActive }) => (isActive ? activeClass : baseClass)}
+            >
+              Gallery
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? activeClass : baseClass)}
+            >
+              Contact
+            </NavLink>
+          </li>
         </ul>
       </div>
 
-      {/* RIGHT: Optional Button */}
+      {/* RIGHT: Button */}
       <div className="navbar-end">
-        <Link to="/volunteer" className="btn btn-outline">
+        <Link
+          to="/volunteer"
+          className="btn btn-outline btn-sm sm:btn-md rounded-full"
+        >
           Join Volunteer
         </Link>
       </div>
