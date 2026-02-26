@@ -37,12 +37,12 @@ export default function Hero() {
                 ❤️ Donate Now
               </Link>
             </a>
-            <a
-              href="/volunteer"
+            <Link
+              to="/volunteer"
               className="relative inline-flex items-center justify-center px-10 py-3 font-semibold rounded-full border-2 border-pink-500 text-pink-600 backdrop-blur-md bg-white/30 transition-all duration-300 hover:bg-pink-500 hover:text-white hover:shadow-[0_0_20px_rgba(236,72,153,0.5)] hover:scale-105"
             >
               🤝 Join with Us
-            </a>{" "}
+            </Link>{" "}
           </div>
         </div>
       </div>
