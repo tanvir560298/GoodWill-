@@ -31,11 +31,21 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[60] mt-3 w-52 p-2 shadow"
           >
-             <li><Link to="/">Home</Link></li>
-<li><Link to="/about">About Us</Link></li>
-<li><Link to="/programs">Programs</Link></li>
-<li><Link to="/gallery">Gallery</Link></li>
-<li><Link to="/contact">Contact</Link></li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About Us</Link>
+            </li>
+            <li>
+              <Link to="/programs">Programs</Link>
+            </li>
+            <li>
+              <Link to="/gallery">Gallery</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
           </ul>
         </div>
 
@@ -46,27 +56,38 @@ const Navbar = () => {
             alt="Goodwill Alliance Logo"
             className="h-12 w-auto object-contain"
           />
-          <span className="font-bold text-lg hidden sm:block">
+          <Link to="/" className="font-bold text-lg hidden sm:block">
             Goodwill Alliance BD
-          </span>
+          </Link>
         </a>
       </div>
 
       {/* CENTER: Desktop Menu */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 items-center">
-          <li><Link to="/">Home</Link></li>
-<li><Link to="/about">About Us</Link></li>
-<li><Link to="/programs">Programs</Link></li>
-<li><Link to="/gallery">Gallery</Link></li>
-<li><Link to="/contact">Contact</Link></li>
-          
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+          <li>
+            <Link to="/programs">Programs</Link>
+          </li>
+          <li>
+            <Link to="/gallery">Gallery</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
         </ul>
       </div>
 
       {/* RIGHT: Optional Button */}
       <div className="navbar-end">
-        <Link to="/volunteer" className="btn btn-outline">Join Volunteer</Link>
+        <Link to="/volunteer" className="btn btn-outline">
+          Join Volunteer
+        </Link>
       </div>
     </div>
   );
