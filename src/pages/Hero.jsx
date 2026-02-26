@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
     <div>
@@ -31,9 +33,9 @@ export default function Hero() {
             >
               <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-pink-400 via-red-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg"></span>
 
-              <span className="relative flex items-center gap-2">
+              <Link to="/donate" className="relative flex items-center gap-2">
                 ❤️ Donate Now
-              </span>
+              </Link>
             </a>
             <a
               href="/volunteer"
