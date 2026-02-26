@@ -7,22 +7,11 @@ import Programs from "../pages/Programs";
 import Contact from "../pages/Contact";
 import Donate from "../pages/Donate";
 import Hero from "../pages/Hero";
-
-const Gallery = () => (
-  <div className="min-h-screen pt-24 px-4">
-    <div className="max-w-5xl mx-auto">
-      <h1 className="text-4xl font-extrabold">Gallery</h1>
-      <p className="mt-3 opacity-80">
-        Gallery page ekhono ready na — pore images diye fill korbo.
-      </p>
-    </div>
-  </div>
-);
+import Gallery from "../pages/Gallery";
 
 export default function AppRoutes() {
   return (
-    <Routes>
-      
+    <Routes>  
       <Route element={<MainLayout />}>
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
@@ -30,6 +19,7 @@ export default function AppRoutes() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/donate" element={<Donate />} />
+         <Route path="/gallery" element={<Gallery />} />
       </Route>
 
       {/* 404 */}
