@@ -1,10 +1,10 @@
 import React from "react";
 
 const impactStats = [
-  { value: "25+", label: "Running Programs", icon: "📌" },
-  { value: "150+", label: "Families Supported", icon: "🏠" },
-  { value: "50+", label: "Active Volunteers", icon: "🤝" },
-  { value: "5+", label: "Emergency Responses", icon: "🚑" },
+  { value: "25+", label: "Running Programs", },
+  { value: "150+", label: "Families Supported",  },
+  { value: "50+", label: "Active Volunteers", },
+  { value: "5+", label: "Emergency Responses", },
 ];
 
 const programs = [
