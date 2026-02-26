@@ -79,7 +79,7 @@ const Navbar = () => {
         </div>
 
         {/* Logo */}
-        <Link to="/" className="btn btn-ghost px-1 flex items-center gap-1">
+        <Link to="/" className="btn btn-ghost px-2 flex items-center gap-2">
           <img
             src={logo}
             alt="Goodwill Alliance Logo"
