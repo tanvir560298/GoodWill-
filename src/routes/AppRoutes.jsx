@@ -8,6 +8,7 @@ import Contact from "../pages/Contact";
 import Donate from "../pages/Donate";
 import Hero from "../pages/Hero";
 import Gallery from "../pages/Gallery";
+import Volunteer from "../pages/Volunteer";
 
 export default function AppRoutes() {
   return (
@@ -19,7 +20,9 @@ export default function AppRoutes() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/donate" element={<Donate />} />
-         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/volunteer" element={<Volunteer />} />
+         
       </Route>
 
       {/* 404 */}

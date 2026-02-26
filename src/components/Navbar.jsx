@@ -66,7 +66,7 @@ const Navbar = () => {
 
       {/* RIGHT: Optional Button */}
       <div className="navbar-end">
-        <a className="btn btn-outline">Join Volunteer</a>
+        <Link to="/volunteer" className="btn btn-outline">Join Volunteer</Link>
       </div>
     </div>
   );
